@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/makash/Documents/C_K_n_R/chapter1/excerpts",
-      "program": "c:/Users/makash/Documents/C_K_n_R/chapter1/excerpts/build/Debug/outDebug",
+      "cwd": "c:/Users/makash/Documents/C_K_n_R/chapter2/excerpts",
+      "program": "c:/Users/makash/Documents/C_K_n_R/chapter2/excerpts/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
