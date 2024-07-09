@@ -13,3 +13,20 @@ void shellsort(int v[], int n)
                 v[j+gap] = temp;
             }
 }
+
+int main()
+{
+    int i, n;
+    int v[10];
+
+    for(i = 0; i < 10; ++i)
+        v[i] = 10 - i;
+    n = 10;
+
+    shellsort(v, n);
+
+    for(i = 0; i < 10; ++i)
+        printf("%d ", v[i]);
+    printf("\n");
+    return 0;
+}
