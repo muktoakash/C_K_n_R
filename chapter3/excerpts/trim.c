@@ -11,3 +11,11 @@ int trim(char s[])
     s[n+1] = '\0';
     return n;
 }
+
+int main()
+{
+    char s[] = "hello, world \n \t ";
+    trim(s);
+    printf("%s\n", s); // hello, world
+    return 0;
+}
