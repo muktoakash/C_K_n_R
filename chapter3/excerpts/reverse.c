@@ -11,3 +11,11 @@ void reverse(char s[])
         s[j] = c;
     }
 }
+
+int main()
+{
+    char s[] = "hello, world";
+    reverse(s);
+    printf("%s\n", s); // dlrow ,olleh
+    return 0;
+}

@@ -19,7 +19,7 @@ int binsearch(int x, int v[], int n)
     return -1;  /* no match */
 }
 
-main()
+int main()
 {
     int i, n;
     int v[10];
