@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "get_line.h"
+#include "strindex.h"
 
 #define MAXLINE 1000 /* maximum input line length */
 

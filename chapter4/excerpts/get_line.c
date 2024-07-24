@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "get_line.h"
 
 /* get_line: get line into s, return length */

@@ -11,11 +11,10 @@ Interface for get_line.c
     
     Reads line from stdin into s, stopping at lim or EOF or newline.
     Returns length of line.
+    Requires: s is large enough to hold line or string of length lim.
     Side effects: Modifies s.
     */
     int get_line(char s[], int lim);
-
-    #include "get_line.c"
 
 #endif
 
