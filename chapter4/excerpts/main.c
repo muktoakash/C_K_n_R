@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include "get_line.h"
+
 #define MAXLINE 1000 /* maximum input line length */
 
 int test_strindex(){
