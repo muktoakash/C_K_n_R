@@ -6,6 +6,7 @@
 #include "polish.h"
 #include "push_pop.h"
 #include "getop.h"
+#include "printd.h"
 
 #define MAXLINE 1000 /* maximum input line length */
 
@@ -92,4 +93,15 @@ int test_polish()
 {
     prinf("Now testing polish calculator\n");
     return polish_calc();
+}
+
+/* test printd */
+int test_printd()
+{
+    prinf("Now testing printd\n");
+    int n = 123456789;
+    printd(n);
+    n = -123456789;
+    printd(n);
+    return 0;
 }
