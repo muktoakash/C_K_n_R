@@ -4,6 +4,8 @@
 #include "getop.h"
 #include "getch_ungetch.h"
 
+#define NUMBER '0' /* signal that a number was found */
+
 int getch(void);
 void ungetch(int);
 
