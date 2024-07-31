@@ -17,7 +17,7 @@ int test_strindex(){
     char s[] = "hello, world!";
     char t[] = "world";
     int result = strindex(s, t);
-    return (result == 7);
+    return !(result == 7);
 }
 
 int test_get_line()
@@ -34,7 +34,7 @@ int test_get_line()
             found++;
         }
     
-    return found;
+    return !found;
 }
 
 /* rudimentary calculator to test atof*/
@@ -131,5 +131,23 @@ int test_qsort()
     for (int i = 0; i < n; i++)
         printf("%d ", v[i]);
     printf("\n");
+    return 0;
+}
+
+/* main test suite */
+int main()
+{
+    int result = 0;
+    result += test_strindex();
+    result += test_get_line();
+    result += test_atof();
+    result += test_getch_ungetch();
+    result += test_getop();
+    result += test_polish();
+    result += test_printd();
+    result += test_swap();
+    result += test_qsort();
+
+    printf("Total Errors: %d\n", result);
     return 0;
 }
