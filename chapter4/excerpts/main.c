@@ -7,6 +7,8 @@
 #include "push_pop.h"
 #include "getop.h"
 #include "printd.h"
+#include "swap.h"
+#include "qsort.h"
 
 #define MAXLINE 1000 /* maximum input line length */
 
@@ -103,5 +105,31 @@ int test_printd()
     printd(n);
     n = -123456789;
     printd(n);
+    return 0;
+}
+
+/* test swap */
+int test_swap()
+{
+    prinf("Now testing swap\n");
+    int x = 1;
+    int y = 2;
+    int v[] = {x, y};
+    printf("x: %d, y: %d\n", x, y);
+    swap(v, &x, &y);
+    printf("x: %d, y: %d\n", x, y);
+    return 0;
+}
+
+/* test qsort */
+int test_qsort()
+{
+    prinf("Now testing qsort\n");
+    int v[] = {5, 3, 4, 1, 2};
+    int n = 5;
+    qsort(v, 0, n-1);
+    for (int i = 0; i < n; i++)
+        printf("%d ", v[i]);
+    printf("\n");
     return 0;
 }
