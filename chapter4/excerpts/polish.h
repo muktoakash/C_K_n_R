@@ -3,12 +3,8 @@
 #ifndef POLISH_H
     #define POLISH_H
 
-    #include "push_pop.h"
-
-    #define MAXOP 100 /* max size of operand or operator */
-    #define NUMBER '0' /* signal that a number was found */ 
-
-    int getop(char []);
+    /* polish_calc()
+    Calculates the result of a reverse Polish expression.*/
     int polish_calc(void);
 
 #endif

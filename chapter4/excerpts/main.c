@@ -11,9 +11,11 @@
 #include "qsort.h"
 
 #define MAXLINE 1000 /* maximum input line length */
+#define MAXOP 100 /* max size of operand or operator */
+#define NUMBER '0' /* signal that a number was found */ 
 
 int test_strindex(){
-    prinf("Now testing strindex\n");
+    printf("Now testing strindex\n");
     char s[] = "hello, world!";
     char t[] = "world";
     int result = strindex(s, t);
@@ -22,7 +24,7 @@ int test_strindex(){
 
 int test_get_line()
 {
-    prinf("Now testing get_line\n");
+    printf("Now testing get_line\n");
     char pattern[] = "ould"; /* pattern to search for */
 
     char line[MAXLINE]; /* input line */
@@ -40,7 +42,7 @@ int test_get_line()
 /* rudimentary calculator to test atof*/
 int test_atof()
 {
-    prinf("Now testing atof\n");
+    printf("Now testing atof\n");
     double sum, atof(char []);
     char line[MAXLINE];
     int get_line(char line[], int max);
@@ -56,7 +58,7 @@ int test_atof()
 /* test getch_ungetch */
 int test_getch_ungetch()
 {
-    prinf("Now testing getch_ungetch\n");
+    printf("Now testing getch_ungetch\n");
     int c;
     int count = 0;
     while ((c = getch()) != EOF){
@@ -76,7 +78,7 @@ int test_getch_ungetch()
 /* test getop */
 int test_getop()
 {
-    prinf("Now testing getop\n");
+    printf("Now testing getop\n");
     char s[MAXOP];
     int type;
     while ((type = getop(s)) != EOF){
@@ -93,14 +95,14 @@ int test_getop()
 /* test polish calculator */
 int test_polish()
 {
-    prinf("Now testing polish calculator\n");
+    printf("Now testing polish calculator\n");
     return polish_calc();
 }
 
 /* test printd */
 int test_printd()
 {
-    prinf("Now testing printd\n");
+    printf("Now testing printd\n");
     int n = 123456789;
     printd(n);
     n = -123456789;
@@ -111,12 +113,12 @@ int test_printd()
 /* test swap */
 int test_swap()
 {
-    prinf("Now testing swap\n");
+    printf("Now testing swap\n");
     int x = 1;
     int y = 2;
-    int v[] = {x, y};
+    int v[2] = {x, y};
     printf("x: %d, y: %d\n", x, y);
-    swap(v, &x, &y);
+    swap(v, 0, 1);
     printf("x: %d, y: %d\n", x, y);
     return 0;
 }
@@ -124,7 +126,7 @@ int test_swap()
 /* test qsort */
 int test_qsort()
 {
-    prinf("Now testing qsort\n");
+    printf("Now testing qsort\n");
     int v[] = {5, 3, 4, 1, 2};
     int n = 5;
     qsort(v, 0, n-1);

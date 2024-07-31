@@ -2,6 +2,12 @@
 #include <stdlib.h> /* for atof */
 #include "polish.h"
 #include "push_pop.h"
+#include "getop.h"
+#include "getch_ungetch.h"
+
+
+#define MAXOP 100 /* max size of operand or operator */
+#define NUMBER '0' /* signal that a number was found */ 
 
 /* reverse Polish calculator */
 int polish_calc()
