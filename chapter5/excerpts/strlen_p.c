@@ -1,10 +1,12 @@
+// ./strlen_p.c
+
 /*strlen: return the length of string s*/
 
 int strlen_p1(char *s)
 {
     int n;
 
-   for (m = 0; *s != '\0'; s++)
+   for (n = 0; *s != '\0'; s++)
         n++;
     return n;
 }
