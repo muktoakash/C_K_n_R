@@ -1,8 +1,10 @@
 // ./getint_p.c
 #include "getint_p.h"
 
+#include <stdio.h>
 #include <ctype.h>
-#include "./getch_ungetch.h"
+#include "../../chapter4/excerpts/getch_ungetch.h"
+
 
 int getch(void);
 void ungetch(int);
