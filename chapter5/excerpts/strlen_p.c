@@ -1,4 +1,6 @@
 // ./strlen_p.c
+#include <stdio.h>
+#include "strlen_p.h"
 
 /*strlen: return the length of string s*/
 
