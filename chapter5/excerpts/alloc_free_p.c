@@ -1,3 +1,4 @@
+#include "alloc_free_p.h"
 // #define ALLOCSIZE 10000
 
 static char allocbuf[ALLOCSIZE]; /* storage for alloc */
