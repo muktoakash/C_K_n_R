@@ -11,4 +11,13 @@
     Side effects: Modifies *px and *py.
     */
     void swap_p1(int *px, int *py);
+
+    /* swap_p2(v[], i, j)
+    
+    Swaps v[i] and v[j].
+    Requires: v is an array of integers, i and j are valid indices.
+    Side effects: Modifies v.
+    */
+    void swap_p2(void *v[], int i, int j);
+    
 #endif
