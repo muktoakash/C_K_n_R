@@ -59,3 +59,11 @@ void writelines(char *lineptr[], int nlines)
     for (i = 0; i < nlines; i++)
         printf("%s\n", lineptr[i]);
 }
+
+/* writelines: write output lines */
+void writelines_p(char *lineptr[], int nlines)
+{
+    while (nlines-->0)
+        printf("%s\n", *lineptr++);
+ 
+}
