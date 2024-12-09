@@ -1,12 +1,12 @@
 // ./alloc_free_p.h
 /*
-Uses buffer of size ALLOCSIZE to allocate memory.
+intereface for alloc_free_p.c
 */
 
 #ifndef ALLOC_FREE_P_H
     #define ALLOC_FREE_P_H
 
-    #define ALLOCSIZE 10000
+    #define ALLOCSIZE 10000 // Uses buffer of size ALLOCSIZE to allocate memory.
 
     /* alloc_p(n)
     Allocates n bytes of memory. Returns a pointer to the first byte. 
