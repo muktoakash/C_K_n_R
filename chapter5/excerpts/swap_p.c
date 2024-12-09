@@ -1,4 +1,5 @@
-#include "swap_p1.h"
+// ./swap_p.c
+#include "swap_p.h"
 
 /* swap: interchange *px and *py */
 
