@@ -7,7 +7,7 @@
 #include "alloc_free_p.h"
 #include "qsort_p.h"
 #include "../../chapter4/excerpts/get_line.h"
-
+#include "numcmp.h"
 
 // #define MAXLINES 5000 /* max #lines to be sorted */
 
@@ -17,7 +17,7 @@ int readlines(char *lineptr[], int nlines);
 void writelines(char *lineptr[], int nlines);
 
 /* sort input lines */
-int sort_lines()
+int sort_lines_p1()
 {
     int nlines; /* number of input lines read */
 
@@ -29,6 +29,26 @@ int sort_lines()
         printf("error: input too big to sort\n");
         return 1;
     }
+}
+
+
+/* sort input lines */
+int sort_lines_p2(int argc, char* argv[])
+{
+    int nlines; /* number of input lines read */
+    int numeric = 0; /* 1 if numeric sort */
+
+    if (argc > 1 && strcmp(argv[1], "-n") == 0)
+        numeric = 1;
+    if ((nlines = readlines(lineptr, MAXLINES)) >= 0) {
+        qsort_p2((void **) lineptr, 0, nlines-1,
+            (int (*)(void*, void*))(numeric ? numcmp : strcmp));
+        writelines(lineptr, nlines);
+        return 0;
+    } else {
+        printf("error: input too big to sort\n");
+        return 1;
+    } 
 }
 
 // # define MAXLEN 1000 /* max length of any input line */
